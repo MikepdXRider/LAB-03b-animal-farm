@@ -30,7 +30,7 @@ horseJpg.addEventListener('click', () => {
     header.innerText = 'Khan the horsey said "NAYYYY!"';
 });
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event) => {
     if (event.key === 'h') {
         horseWav.play();
         header.innerText = 'Khan the horsey said "NAYYYY!"';
