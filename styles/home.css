@@ -1,1 +1,29 @@
-/* add home page styles here */
+
+
+media{
+    display: flex;
+    justify-content: space-around;
+}
+
+#dogImg{
+    
+}
+
+#catImg{
+
+}
+
+#horseImg{
+
+}
+
+button{
+    border: 0;
+    background-color: white;
+    transition: 0.5s;
+}
+
+button:hover{
+    transform: rotate(360deg) scale(1.25);
+    cursor:pointer;
+}
