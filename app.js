@@ -15,34 +15,46 @@ const horseJpg = document.getElementById('horseJpg');
 const horseWav = document.getElementById('horseWav');
 const header = document.getElementById('header');
 
+const playSound = (sound) => {
+    sound.play();
+};
+
+const changeText = (animalType) => {
+    header.textContent = animalType;
+};
+
+const playSoundAndChangeTextAndTimeout = (sound, animalType) => {
+    playSound(sound);
+    changeText(animalType);
+    setTimeout(() => {
+        header.textContent = 'Choose another animal!';
+    }, 1000);
+};
+
 // MOUSE EVENTS
 catJpg.addEventListener('click', () => {
-    catWav.play();
-    header.textContent = 'Tigger the tiger said "MEOW!"';
+    playSoundAndChangeTextAndTimeout(catWav, 'Kitty-Cat');
 });
 
 dogJpg.addEventListener('click', () => {
-    dogWav.play();
-    header.textContent = 'Astro the pupper said "RUFF!"';
+    playSoundAndChangeTextAndTimeout(dogWav, 'Doggo');
 });
 
 horseJpg.addEventListener('click', () => {
-    horseWav.play();
-    header.textContent = 'Khan the horsey said "NAYYYY!"';
+    playSoundAndChangeTextAndTimeout(horseWav, 'Horsey-Poo');
 });
 
 
 // KEY EVENTS
 document.addEventListener('keydown', (event) => {
     if (event.key === 'h') {
-        horseWav.play();
-        header.textContent = 'Khan the horsey said "NAYYYY!"';
-    } else if(event.key === 'd') {
-        dogWav.play();
-        header.textContent = 'Astro the pupper said "RUFF!"';
-    } else if(event.key === 'c'){
-        catWav.play();
-        header.textContent = 'Tigger the tiger said "MEOW!"';
+        playSoundAndChangeTextAndTimeout(horseWav, 'Horsey-Poo');
+    }
+    if (event.key === 'd') {
+        playSoundAndChangeTextAndTimeout(dogWav, 'Doggo');
+    }
+    if (event.key === 'c'){
+        playSoundAndChangeTextAndTimeout(catWav, 'Kitty-Cat');
     }
 });
 
