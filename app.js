@@ -15,31 +15,34 @@ const horseJpg = document.getElementById('horseJpg');
 const horseWav = document.getElementById('horseWav');
 const header = document.getElementById('header');
 
+// MOUSE EVENTS
 catJpg.addEventListener('click', () => {
     catWav.play();
-    header.innerText = 'Tigger the tiger said "MEOW!"';
+    header.textContent = 'Tigger the tiger said "MEOW!"';
 });
 
 dogJpg.addEventListener('click', () => {
     dogWav.play();
-    header.innerText = 'Astro the pupper said "RUFF!"';
+    header.textContent = 'Astro the pupper said "RUFF!"';
 });
 
 horseJpg.addEventListener('click', () => {
     horseWav.play();
-    header.innerText = 'Khan the horsey said "NAYYYY!"';
+    header.textContent = 'Khan the horsey said "NAYYYY!"';
 });
 
+
+// KEY EVENTS
 document.addEventListener('keydown', (event) => {
     if (event.key === 'h') {
         horseWav.play();
-        header.innerText = 'Khan the horsey said "NAYYYY!"';
+        header.textContent = 'Khan the horsey said "NAYYYY!"';
     } else if(event.key === 'd') {
         dogWav.play();
-        header.innerText = 'Astro the pupper said "RUFF!"';
+        header.textContent = 'Astro the pupper said "RUFF!"';
     } else if(event.key === 'c'){
         catWav.play();
-        header.innerText = 'Tigger the tiger said "MEOW!"';
+        header.textContent = 'Tigger the tiger said "MEOW!"';
     }
 });
 
