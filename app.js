@@ -16,17 +16,32 @@ const horseWav = document.getElementById('horseWav');
 const header = document.getElementById('header');
 
 catJpg.addEventListener('click', () => {
-  catWav.play();
-  header.innerText = 'Tigger the tiger said "MEOW!"';
+    catWav.play();
+    header.innerText = 'Tigger the tiger said "MEOW!"';
 });
 
 dogJpg.addEventListener('click', () => {
-  dogWav.play();
-  header.innerText = 'Astro the pupper said "RUFF!"';
+    dogWav.play();
+    header.innerText = 'Astro the pupper said "RUFF!"';
 });
 
 horseJpg.addEventListener('click', () => {
-  horseWav.play();
-  header.innerText = 'Khan the horsey said "NAYYYY!"';
+    horseWav.play();
+    header.innerText = 'Khan the horsey said "NAYYYY!"';
 });
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'h') {
+        horseWav.play();
+        header.innerText = 'Khan the horsey said "NAYYYY!"';
+    } else if (event.key === 'd') {
+        dogWav.play();
+        header.innerText = 'Astro the pupper said "RUFF!"';
+    } else if (event.key === 'c'){
+        catWav.play();
+        header.innerText = 'Tigger the tiger said "MEOW!"';
+    }
+});
+
+
 
