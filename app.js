@@ -30,14 +30,14 @@ horseJpg.addEventListener('click', () => {
     header.innerText = 'Khan the horsey said "NAYYYY!"';
 });
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'h') {
         horseWav.play();
         header.innerText = 'Khan the horsey said "NAYYYY!"';
-    } else if (event.key === 'd') {
+    } else if(event.key === 'd') {
         dogWav.play();
         header.innerText = 'Astro the pupper said "RUFF!"';
-    } else if (event.key === 'c'){
+    } else if(event.key === 'c'){
         catWav.play();
         header.innerText = 'Tigger the tiger said "MEOW!"';
     }
