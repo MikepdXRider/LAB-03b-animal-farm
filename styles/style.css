@@ -112,18 +112,42 @@ footer {
 
   }
 
-media{
+.media-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+img{
+    height: 400px;
+    width: 450px;
 }
 
 button{
     border: 0;
-    background-color: white;
-    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.3s;
+    padding: 0;
+    border-radius: 10%;
+    overflow: hidden;
+    margin: 50px;
+    border: solid 3px white;
 }
 
 button:hover{
-    transform: rotate(360deg) scale(1.25);
+    transform: scale(1.25);
     cursor:pointer;
+    border-color: red;
+}
+
+body{
+    background-image: url('https://i.redd.it/ghlqll4w0ob41.jpg');
+    background-size: cover;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgb(87, 87, 87);
+    background-color: rgba(0,0,0,0.75);
+    padding: 5px 15px;
 }
